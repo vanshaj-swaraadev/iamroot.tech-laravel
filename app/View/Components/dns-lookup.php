@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class navbar.blade extends Component
+class dns-lookup extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class navbar.blade extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navbar.blade');
+        return view('components.dns-lookup');
     }
 }

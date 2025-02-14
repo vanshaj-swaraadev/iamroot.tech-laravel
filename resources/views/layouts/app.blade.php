@@ -6,15 +6,16 @@
     <title>{{ $title ?? 'Laravel App' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    <x-navbar />
+<body class="flex flex-col lg:flex-row">
+    <x-sidebar />
 
     <main>
         {{ $slot }}
+        <footer>Footer&copy; {{ date('Y') }} Laravel App
+        </footer>
     </main>
 
-    <footer>
-        <p>&copy; {{ date('Y') }} Laravel App</p>
-    </footer>
+    <script src="https://kit.fontawesome.com/d81661e38c.js" crossorigin="anonymous"></script>
+    @vite(['resources/js/custom.js'])
 </body>
 </html>
